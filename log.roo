@@ -1,0 +1,27 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-12 21:14:21
+project --topLevelPackage com.lazyman.vansing
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY 
+entity jpa --class com.lazyman.vansing.domain.Student --testAutomatically 
+field string --fieldName name --notNull --sizeMax 20
+entity jpa --class ~.domain.Grade --testAutomatically 
+field string --fieldName name --sizeMax 10 --notNull 
+field reference --fieldName grade --type ~.domain.Grade
+field reference --fieldName grade --type ~.domain.Grade --class ~.domain.Student
+entity jpa --class ~.domain.School --testAutomatically 
+field string --fieldName name --sizeMax 60 --notNull 
+field reference --fieldName school --type ~.domain.School --class Student
+field string --fieldName email --sizeMax 30
+field string --fieldName phoneNumber --sizeMax 20
+field string --fieldName address --sizeMax 40
+field string --fieldName memo --sizeMax 60
+entity jpa --class ~.domain.Teacher --testAutomatically 
+field string --fieldName name --sizeMax 20 --notNull 
+field string --fieldName phoneNumber --sizeMax 20
+field string --fieldName memo --sizeMax 60
+perform tests
+web mvc setup
+web mvc all --package ~.web
+field date --fieldName enrollDate --type java.util.Date --class ~.domain.Student --notNull 
+security setup
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-11-12 23:13:10

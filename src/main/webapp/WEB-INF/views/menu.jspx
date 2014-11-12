@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_grade" z="55bUbN85n9/DuncrzrLYc0gdCm8=">
+            <menu:item id="i_grade_new" messageCode="global_menu_new" url="/grades?form" z="5k0Z4laywUFV9QhixgmpM+9s9v8="/>
+            <menu:item id="i_grade_list" messageCode="global_menu_list" url="/grades?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xgZdCTfn0rWm9UgRW36qkROKY+A="/>
+        </menu:category>
+        <menu:category id="c_school" z="eoW7JdH3G0Eir4+oiWePRRnMWDw=">
+            <menu:item id="i_school_new" messageCode="global_menu_new" url="/schools?form" z="YQvy0whAMcyIGP8oZNdr7W6+FS0="/>
+            <menu:item id="i_school_list" messageCode="global_menu_list" url="/schools?page=1&amp;size=${empty param.size ? 10 : param.size}" z="OEaKBOVYv2YEgPkDPI2kaB2MGPY="/>
+        </menu:category>
+        <menu:category id="c_teacher" z="LDHalaWcu+4uB1/Yp2U+qmXGmfE=">
+            <menu:item id="i_teacher_new" messageCode="global_menu_new" url="/teachers?form" z="mlYI9sXVCvEJatzE6XYulrmxPjA="/>
+            <menu:item id="i_teacher_list" messageCode="global_menu_list" url="/teachers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="qck+mw1AUxmT+v1gCnHL2kVUn3k="/>
+        </menu:category>
+        <menu:category id="c_student" z="VA/5j81jpINYUQQoxpb8LUYLpWk=">
+            <menu:item id="i_student_new" messageCode="global_menu_new" url="/students?form" z="xCEWOyB2txSvWmV9Fxwd+H7BxCM="/>
+            <menu:item id="i_student_list" messageCode="global_menu_list" url="/students?page=1&amp;size=${empty param.size ? 10 : param.size}" z="PSLnBxZ6Z7hXmOglFNorqDjA2H0="/>
+        </menu:category>
+    </menu:menu>
+</div>

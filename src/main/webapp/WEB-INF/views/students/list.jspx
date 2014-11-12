@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_lazyman_vansing_domain_Student" items="${students}" z="kWzjMLr80qpSvnKtgqT7mLc8QRQ=">
+        <table:table data="${students}" id="l_com_lazyman_vansing_domain_Student" path="/students" z="RtEJPqZGQ6kXKorv8f0x+rrKwWE=">
+            <table:column id="c_com_lazyman_vansing_domain_Student_name" property="name" z="1YJLiRTa1Exo5fIRv9aTz71zYzA="/>
+            <table:column id="c_com_lazyman_vansing_domain_Student_grade" property="grade" z="PI7U7FT8Y4rn+l0X/C4sur5YEMg="/>
+            <table:column id="c_com_lazyman_vansing_domain_Student_school" property="school" z="dc0Osbb+VfjTVMDjyDgCSXokJvY="/>
+            <table:column id="c_com_lazyman_vansing_domain_Student_email" property="email" z="ocaIYi0ocIh7oq9PtLF12ZWECyo="/>
+            <table:column id="c_com_lazyman_vansing_domain_Student_phoneNumber" property="phoneNumber" z="gRRZOP8N73U1E+aajhL9iY5sVL8="/>
+            <table:column id="c_com_lazyman_vansing_domain_Student_address" property="address" z="QJ87PobiSpXXdokzANYlLFZQQXk="/>
+        </table:table>
+    </page:list>
+</div>
