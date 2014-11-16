@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_lazyman_vansing_domain_Payment" object="${payment}" path="/payments" z="GkVrt6TfbAODJNEm/dO5pcvH4pg=">
+        <field:display field="student" id="s_com_lazyman_vansing_domain_Payment_student" object="${payment}" z="iOLNq2BHtzBqwlVICFTjKUaF2EU="/>
+        <field:display field="course" id="s_com_lazyman_vansing_domain_Payment_course" object="${payment}" z="BtKkVyZX1Xu2p85LvjVZDARLja0="/>
+        <field:display field="fee" id="s_com_lazyman_vansing_domain_Payment_fee" object="${payment}" z="zjWoF1LG1sMzUV82QB2Tsww7THA="/>
+        <field:display date="true" dateTimePattern="${payment_paydate_date_format}" field="payDate" id="s_com_lazyman_vansing_domain_Payment_payDate" object="${payment}" z="O1whOFvzsSi+BGyerCrCzk5We8Q="/>
+        <field:display field="memo" id="s_com_lazyman_vansing_domain_Payment_memo" object="${payment}" z="mrI2CBZW7xMgiLf5EunMIa2H9EU="/>
+    </page:show>
+</div>

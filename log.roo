@@ -25,3 +25,28 @@ field date --fieldName enrollDate --type java.util.Date --class ~.domain.Student
 security setup
 quit
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-11-12 23:13:10
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-15 10:19:23
+entity jpa --class ~.domain.Course --testAutomatically 
+field string --fieldName name --sizeMax 60 --notNull 
+field number --fieldName classNumber --type java.lang.Integer --primitive --notNull 
+field string --fieldName name --sizeMax 60 --notNull --unique 
+field date --fieldName startDate --type java.util.Date
+field string --fieldName memo --sizeMax 60 
+field reference --fieldName teacher --type ~.domain.Teacher
+web mvc all --package com.lazyman.vansing.web
+field number --fieldName price --class ~.domain.Course --type java.lang.Integer --value 1000  --notNull 
+entity jpa --class ~.domain.Payment --testAutomatically
+field reference --fieldName student --type ~.domain.Student --notNull 
+field reference --fieldName course --notNull --type ~.domain.Course
+field number --fieldName fee --type java.lang.Integer --primitive --notNull 
+field date --fieldName payDate --type java.util.Date --notNull
+field string --fieldName memo --sizeMax 60
+web mvc all --package com.lazyman.vansing.web
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-11-15 22:13:40
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-16 10:42:27
+find li --class ~.domain.Payment
+finder add --finderName findPaymentsByCourse
+web mvc all --package com.lazyman.vansing.web
+web mvc finder all
+finder list --class ~.domain.Payment

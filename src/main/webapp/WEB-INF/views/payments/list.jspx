@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_lazyman_vansing_domain_Payment" items="${payments}" z="WeXnPCC6oA+o09qRfuZF6YQxdyg=">
+        <table:table data="${payments}" id="l_com_lazyman_vansing_domain_Payment" path="/payments" z="ARsp9DVnyt+7YGYJ71fUIIxkT/Y=">
+            <table:column id="c_com_lazyman_vansing_domain_Payment_student" property="student" z="/smEsxbFv81pH+NCqypboOV8M8c="/>
+            <table:column id="c_com_lazyman_vansing_domain_Payment_course" property="course" z="cpGbwv6xpXxQl546//Au+0XV2yI="/>
+            <table:column id="c_com_lazyman_vansing_domain_Payment_fee" property="fee" z="U8cn5OXKRjls8QdCSyLMdUBHxo4="/>
+            <table:column date="true" dateTimePattern="${payment_paydate_date_format}" id="c_com_lazyman_vansing_domain_Payment_payDate" property="payDate" z="eTM9R2KUx4p/UF7ivsMSTfxuE+E="/>
+            <table:column id="c_com_lazyman_vansing_domain_Payment_memo" property="memo" z="0TlhBxu0QuHHRp6JPA35S1DLyYA="/>
+        </table:table>
+    </page:list>
+</div>

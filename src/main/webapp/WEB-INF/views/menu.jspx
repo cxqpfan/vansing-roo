@@ -19,5 +19,14 @@
             <menu:item id="i_student_new" messageCode="global_menu_new" url="/students?form" z="xCEWOyB2txSvWmV9Fxwd+H7BxCM="/>
             <menu:item id="i_student_list" messageCode="global_menu_list" url="/students?page=1&amp;size=${empty param.size ? 10 : param.size}" z="PSLnBxZ6Z7hXmOglFNorqDjA2H0="/>
         </menu:category>
+        <menu:category id="c_course" z="xwPFa1gir7x2AC89oGWk0WgKTE0=">
+            <menu:item id="i_course_new" messageCode="global_menu_new" url="/courses?form" z="vR3sAxuatm9tFJBQbX6a5epcJ2U="/>
+            <menu:item id="i_course_list" messageCode="global_menu_list" url="/courses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ym6LbWOetujuA2Z1C5Io6i7oW9I="/>
+        </menu:category>
+        <menu:category id="c_payment" z="KXvP3nk7swdtwqF1yirxi8G+72w=">
+            <menu:item id="i_payment_new" messageCode="global_menu_new" url="/payments?form" z="MsWgEk8mPOMZsZrpSmZ4EEiRzKQ="/>
+            <menu:item id="i_payment_list" messageCode="global_menu_list" url="/payments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z3RAJMV3OotiyNAbiUB5cNixuyY="/>
+            <menu:item id="fi_payment_course" messageCode="global_menu_find" url="/payments?find=ByCourse&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="9Z3W3OaKrtlsqBK/Ysip5uNzJQE="/>
+        </menu:category>
     </menu:menu>
 </div>

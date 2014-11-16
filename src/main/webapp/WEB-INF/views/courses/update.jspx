@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_lazyman_vansing_domain_Course" modelAttribute="course" path="/courses" versionField="Version" z="dR8Ky4rr04IHnMKgWP1OU7NFufA=">
+        <field:textarea field="name" id="c_com_lazyman_vansing_domain_Course_name" required="true" z="maBFwjK9X5fzuyO2PBLucbANpuA="/>
+        <field:input field="classNumber" id="c_com_lazyman_vansing_domain_Course_classNumber" required="true" z="zmvu01fbhipAkgeYKrEbs774++E="/>
+        <field:input field="price" id="c_com_lazyman_vansing_domain_Course_price" required="true" validationMessageCode="field_invalid_integer" z="gbkHtDimYawI5A7OvJcGQ9m9rAc="/>
+        <field:datetime dateTimePattern="${course_startdate_date_format}" field="startDate" id="c_com_lazyman_vansing_domain_Course_startDate" z="bNcxDHYTGKVge4yJ5vhcq+BgdEE="/>
+        <field:select field="teacher" id="c_com_lazyman_vansing_domain_Course_teacher" itemValue="id" items="${teachers}" path="/teachers" required="true" z="gJIxyWSs26zn+VR8Op0AhH/8r1M="/>
+        <field:textarea field="memo" id="c_com_lazyman_vansing_domain_Course_memo" z="0N0i+LyViJhtPy2tz7PrvRg+v5k="/>
+    </form:update>
+</div>

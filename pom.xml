@@ -466,6 +466,8 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>8.1.4.v20120524</version>
                 <configuration>
+                    <stopPort>8089</stopPort>
+                    <stopKey>shutdown</stopKey>
                     <webAppConfig>
                         <contextPath>/${project.name}</contextPath>
                     </webAppConfig>

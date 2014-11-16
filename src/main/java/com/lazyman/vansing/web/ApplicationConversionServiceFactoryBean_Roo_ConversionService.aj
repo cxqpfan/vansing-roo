@@ -3,7 +3,9 @@
 
 package com.lazyman.vansing.web;
 
+import com.lazyman.vansing.domain.Course;
 import com.lazyman.vansing.domain.Grade;
+import com.lazyman.vansing.domain.Payment;
 import com.lazyman.vansing.domain.School;
 import com.lazyman.vansing.domain.Student;
 import com.lazyman.vansing.domain.Teacher;
@@ -15,6 +17,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Course, String> ApplicationConversionServiceFactoryBean.getCourseToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.lazyman.vansing.domain.Course, java.lang.String>() {
+            public String convert(Course course) {
+                return new StringBuilder().append(course.getName()).append(' ').append(course.getClassNumber()).append(' ').append(course.getPrice()).append(' ').append(course.getStartDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Course> ApplicationConversionServiceFactoryBean.getIdToCourseConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.lazyman.vansing.domain.Course>() {
+            public com.lazyman.vansing.domain.Course convert(java.lang.Long id) {
+                return Course.findCourse(id);
+            }
+        };
+    }
+    
+    public Converter<String, Course> ApplicationConversionServiceFactoryBean.getStringToCourseConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.lazyman.vansing.domain.Course>() {
+            public com.lazyman.vansing.domain.Course convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Course.class);
+            }
+        };
+    }
     
     public Converter<Grade, String> ApplicationConversionServiceFactoryBean.getGradeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.lazyman.vansing.domain.Grade, java.lang.String>() {
@@ -36,6 +62,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.lazyman.vansing.domain.Grade>() {
             public com.lazyman.vansing.domain.Grade convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Grade.class);
+            }
+        };
+    }
+    
+    public Converter<Payment, String> ApplicationConversionServiceFactoryBean.getPaymentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.lazyman.vansing.domain.Payment, java.lang.String>() {
+            public String convert(Payment payment) {
+                return new StringBuilder().append(payment.getFee()).append(' ').append(payment.getPayDate()).append(' ').append(payment.getMemo()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Payment> ApplicationConversionServiceFactoryBean.getIdToPaymentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.lazyman.vansing.domain.Payment>() {
+            public com.lazyman.vansing.domain.Payment convert(java.lang.Long id) {
+                return Payment.findPayment(id);
+            }
+        };
+    }
+    
+    public Converter<String, Payment> ApplicationConversionServiceFactoryBean.getStringToPaymentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.lazyman.vansing.domain.Payment>() {
+            public com.lazyman.vansing.domain.Payment convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Payment.class);
             }
         };
     }
@@ -113,9 +163,15 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getCourseToStringConverter());
+        registry.addConverter(getIdToCourseConverter());
+        registry.addConverter(getStringToCourseConverter());
         registry.addConverter(getGradeToStringConverter());
         registry.addConverter(getIdToGradeConverter());
         registry.addConverter(getStringToGradeConverter());
+        registry.addConverter(getPaymentToStringConverter());
+        registry.addConverter(getIdToPaymentConverter());
+        registry.addConverter(getStringToPaymentConverter());
         registry.addConverter(getSchoolToStringConverter());
         registry.addConverter(getIdToSchoolConverter());
         registry.addConverter(getStringToSchoolConverter());

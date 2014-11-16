@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_lazyman_vansing_domain_Course" object="${course}" path="/courses" z="CYCnpLxFbozfrnU0Z8929AXn+Ik=">
+        <field:display field="name" id="s_com_lazyman_vansing_domain_Course_name" object="${course}" z="kFWTDbz4lmrfIttRC+5h7o+BiZY="/>
+        <field:display field="price" id="s_com_lazyman_vansing_domain_Course_price" object="${course}" z="gCGJyFFF+JAinGiVF+5GWW+H4eU="/>
+        <field:display field="classNumber" id="s_com_lazyman_vansing_domain_Course_classNumber" object="${course}" z="HdfjqGJDDMdD8Ee9WVEQeuGQOmc="/>
+        <field:display date="true" dateTimePattern="${course_startdate_date_format}" field="startDate" id="s_com_lazyman_vansing_domain_Course_startDate" object="${course}" z="Fs3h8Stpz8902/28qWn8LNaRNEY="/>
+        <field:display field="teacher" id="s_com_lazyman_vansing_domain_Course_teacher" object="${course}" z="BPtbSDApx34ItXhgI3y0blv1f0E="/>
+        <field:display field="memo" id="s_com_lazyman_vansing_domain_Course_memo" object="${course}" z="dtNGW4RCw9NHAdOifHaehtFFeUY="/>
+    </page:show>
+</div>
